@@ -1,0 +1,8 @@
+*.DS_Store
+local.properties
+.settings/
+bin/
+gen/
+example/bin/
+example/gen/
+example/.settings/
