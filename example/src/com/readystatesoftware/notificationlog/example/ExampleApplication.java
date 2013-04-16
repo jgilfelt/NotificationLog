@@ -10,7 +10,7 @@ public class ExampleApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		if (BuildConfig.DEBUG) {
-			Log.initNotifications(this, R.drawable.ic_stat_log);
+			Log.initialize(this, R.drawable.ic_stat_log);
 		}
 	}
 

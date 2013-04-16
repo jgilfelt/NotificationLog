@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">NotificationLog Example</string>
+    <string name="app_name">NotificationLog</string>
     <string name="hello">Hello Log</string>
     <string name="async">Thread</string>
     <string name="start_spam">Start Spam</string>
