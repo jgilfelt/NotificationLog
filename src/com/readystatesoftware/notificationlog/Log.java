@@ -141,11 +141,11 @@ public final class Log {
 		super.finalize();
 	}
 
-	public static void initNotifications(Context context) {
-    	initNotifications(context, 0);
+	public static void initialize(Context context) {
+		initialize(context, 0);
     }
     
-    public static void initNotifications(Context context, int icon) {
+    public static void initialize(Context context, int icon) {
     	sLog.mContext = context;
     	sLog.mLogToast0 = new Toast(context);
     	sLog.mLogToast1 = new Toast(context);
