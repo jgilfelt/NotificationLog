@@ -95,7 +95,6 @@ public class LogActivity extends Activity {
 	}
 
 	private void init(boolean newInstance) {
-		//Log.w("LogActivity", "action=" + action);
 		
 		switch (action) {
 		case ACTION_VIEW:
@@ -157,7 +156,7 @@ public class LogActivity extends Activity {
 		final String[] tags = t.toArray(new String[t.size()]);
 		
 		AlertDialog dlg = new AlertDialog.Builder(this)
-		.setTitle("Select Tag")
+		.setTitle("Tag Filter")
 		.setSingleChoiceItems(tags, selected, new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int which) {
 		    	selected = which;
