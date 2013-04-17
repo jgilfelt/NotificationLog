@@ -141,10 +141,27 @@ public final class Log {
 		super.finalize();
 	}
 
+    /**
+     * Initialize the NotificationLog so that subsequent calls to the various 
+     * Log methods will send output to a notification in addition to the system 
+     * log. If you do not call this method, this class behaves exactly as 
+     * android.util.Log.
+     * 
+     * @param context your application context
+     */
 	public static void initialize(Context context) {
 		initialize(context, 0);
     }
     
+    /**
+     * Initialize the NotificationLog so that subsequent calls to the various 
+     * Log methods will send output to a notification in addition to the system 
+     * log. If you do not call this method, this class behaves exactly as 
+     * android.util.Log.
+     * 
+     * @param context your application context
+     * @param icon drawable resource identifier to use as the notification icon
+     */
     public static void initialize(Context context, int icon) {
     	sLog.mContext = context;
     	sLog.mLogToast0 = new Toast(context);
@@ -176,10 +193,22 @@ public final class Log {
     	sLog.mActivityIntegrationAvailable = isActivityAvailable(context, LogActivity.class.getName());
     }
     
+    /**
+     * Enable or disable notification log output.
+     * 
+     * @param enable
+     */
     public static void setNotificationsEnabled(boolean enable) {
     	sNotificationsEnabled = enable;
     }
     
+    /**
+     * Enable or disable toast log output. This is disabled by default and should not
+     * be enabled during any performance critical code. Toast notifications will not
+     * appear when the Log methods are called off of the main thread.
+     * 
+     * @param enable
+     */
     public static void setToastsEnabled(boolean enable) {
     	sToastsEnabled = enable;
     }
