@@ -3,6 +3,8 @@ NotificationLog
 
 Use an expanded notification as a makeshift Android log output console.
 
+https://vine.co/v/bFxhUAVjvrY
+
 ![Screenshots][1]
 
 The design goals of this project are as follows: 
@@ -30,7 +32,7 @@ public void onCreate() {
 }
 ````
 
-Once initialized, the `Log.v()` `Log.d()` `Log.i()` `Log.w()` `Log.e()` and `Log.wtf()` will write to the notification. This can be enabled or disabled at any time using the `Log.setNotificationsEnabled()` method.
+Once initialized, the `Log.v()`, `Log.d()`, `Log.i()`, `Log.w()`, `Log.e()` and `Log.wtf()` methods will write to the notification. This can be enabled or disabled at any time using the `Log.setNotificationsEnabled()` method.
 
 Advanced Integration
 --------------------
