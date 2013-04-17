@@ -8,7 +8,7 @@ Use an expanded notification as a makeshift Android log output console.
 The design goals of this project are as follows: 
 + Provide an on-device view of explicit log output during app development.
 + Do not disrupt the normal lifecycle of the app (no app switching).
-+ Transparent implementation (using the same API as [`andrid.util.Log`][3], easily disabled).
++ Transparent implementation (using the same API as [android.util.Log][3], easily disabled).
 + Minimal setup.
 
 This library does not currently output the system LogCat, only messages explicitly logged within the app. The status of this project should be considered "experimental".
@@ -16,9 +16,9 @@ This library does not currently output the system LogCat, only messages explicit
 Usage
 -----
 
-Include the jar file (run `ant jar` to build from source, or download it [here][2]) in your project. NotificationLog has the same API as [`andrid.util.Log`][3]. You should switch your imports to `com.readystatesoftware.notificationlog.Log`.
+Include the jar file (run `ant jar` to build from source, or download it [here][2]) in your project. NotificationLog has the same API as [android.util.Log][3]. You should switch your imports to `com.readystatesoftware.notificationlog.Log`.
 
-By default, NotificationLog behaves exactly the same as [`andrid.util.Log`][3]. To enable the additional notification logging, you must first initialize the class for notifications. You might want to do that in your Application class like so:
+By default, NotificationLog behaves exactly the same as [android.util.Log][3]. To enable the additional notification logging, you must first initialize the class for notifications. You might want to do that in your Application class like so:
 
 ````java
 @Override
@@ -47,7 +47,7 @@ To display a more detailed view of the log buffer and provide additional filter,
 Toasts
 ------
 
-You can have log messages additionally appear as Toasts by using the `Log.setNotificationsEnabled()` method. This is disabled by default and should not be enabled during any performance critical code. Toast notifications will not appear when the Log methods are called off of the main thread.
+You can have log messages additionally appear as Toasts by using the `Log.setToastsEnabled()` method. This is disabled by default and should not be enabled during any performance critical code. Toast notifications will not appear when the Log methods are called off of the main thread.
 
 Credits
 -------
